@@ -1,4 +1,4 @@
-// 4) В строке, состоящей из групп нулей и единиц, разделенных пробелами, найти и вывести на экран группы с четным кол-вом символов
+// In a string consisting of groups of zeros and ones print groups containing even amount of elements
 
 #include <iostream>
 #include <conio.h>
