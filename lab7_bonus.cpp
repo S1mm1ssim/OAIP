@@ -1,4 +1,4 @@
-// 11. Дана строка, состоящая из слов на английском языке, разделенных пробелами.Вывести на экран эти слова в порядке алфавита.
+// 11. Given a string of words in English separated by spaces.
 
 // accomodation accident accountant access accompany
 // -> access accident accomodation accompany accountant
@@ -10,10 +10,10 @@
 
 using namespace std;
 
-void PrintString(char *const *const, int);
+void PrintString(const char**, int);
 void Sort(char**, int, int);
-int CountWords(char* const str);
-int MaxWordLen(char* const, int);
+int CountWords(const char* str);
+int MaxWordLen(const char*, int);
 
 int main()
 {
@@ -66,7 +66,7 @@ int main()
 	return 0;
 }
 
-void PrintString(char *const*const str, int numwords) {
+void PrintString(const char **str, int numwords) {
 	for (int i = 0; i < numwords; i++) {
 		cout << str[i] << " ";
 	}
@@ -89,7 +89,7 @@ void Sort(char** str, int numwords, int maxwordlen)
 	bufarr = nullptr;
 }
 
-int CountWords(char *const str) {
+int CountWords(const char *str) {
 	int len = strlen(str);
 	int number_spaces = 0, number_words = 0;
 	for (int i = 0; i < len; ++i) {
@@ -102,7 +102,7 @@ int CountWords(char *const str) {
 	return number_words;
 }
 
-int MaxWordLen(char *const initialstr, int numberwords) {
+int MaxWordLen(const char *initialstr, int numberwords) {
 	int maxlen = 0, wordlen = 0;
 	for (int i = 0; i < numberwords; ++i) {
 		int position = 0;
