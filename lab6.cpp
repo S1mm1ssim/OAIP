@@ -1,12 +1,12 @@
-// 4) Задана матрица размером N*M. Определить количество "особых" элементов
-// считать элемент особым, если он больше суммы всех остальных элементов своего столбца
+// 4) Given a matrix of size NxM find the number of 'special' elements
+// The element is count as 'special' if its value is bigger than the sum the rest column elements
 
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>
 
 int ReadNumber();
-void PrintArray(int *const*const array, int n, int m);
+void PrintArray(const int **array, int n, int m);
 
 using namespace std;
 
@@ -70,7 +70,7 @@ int ReadNumber() {
 	return t;
 }
 
-void PrintArray(int *const*const array, int n, int m) {
+void PrintArray(const int **array, int n, int m) {
 	cout << "Your array:" << endl;
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < m; ++j) {
