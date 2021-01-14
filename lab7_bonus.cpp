@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void PrintString(const char**, int);
+void PrintString(char**, int);
 void Sort(char**, int, int);
 int CountWords(const char* str);
 int MaxWordLen(const char*, int);
@@ -66,7 +66,7 @@ int main()
 	return 0;
 }
 
-void PrintString(const char **str, int numwords) {
+void PrintString(char **str, int numwords) {
 	for (int i = 0; i < numwords; i++) {
 		cout << str[i] << " ";
 	}
