@@ -67,6 +67,7 @@ int main()
 }
 
 void PrintString(char **str, int numwords) {
+	if (!str) { return; }
 	for (int i = 0; i < numwords; i++) {
 		cout << str[i] << " ";
 	}
@@ -90,6 +91,7 @@ void Sort(char** str, int numwords, int maxwordlen)
 }
 
 int CountWords(const char *str) {
+	if (!str) { return; }
 	int len = strlen(str);
 	int number_spaces = 0, number_words = 0;
 	for (int i = 0; i < len; ++i) {
@@ -103,6 +105,7 @@ int CountWords(const char *str) {
 }
 
 int MaxWordLen(const char *initialstr, int numberwords) {
+	if (!initial string) { return; }
 	int maxlen = 0, wordlen = 0;
 	for (int i = 0; i < numberwords; ++i) {
 		int position = 0;
