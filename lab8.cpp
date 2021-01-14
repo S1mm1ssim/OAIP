@@ -1,10 +1,11 @@
-// 4) Распечатать анкетные данные студентов, фамилии которых начинаются с буквы А, и сдавших математику на 8 или 9
-// Каждая запись должна содержать следующую информацию о студентах
-// - Фамилия и инициалы
-// - Год рождения
-// - Номер группы
-// - Оценки за семестр по физике, математике, информатике, химии
-// - средний балл
+// 4) Print personal data of students
+// Make a function to print data of students who got 8 or 9 grades in maths
+// Each registration must contain the following data fields:
+// - Surname, name and patronymic
+// - Birth date
+// - Group number
+// - Marks in maths, physics, chemistry, information technology
+// - Average mark
 
 #include <iostream>
 #include <conio.h>
@@ -259,7 +260,7 @@ void SearchFileStudents() {
 			std::cout << "-----------------------------------------------------------INFORMATION---------------------------------------------------------------------" << std::endl;
 			while (finp.read((char*)&bufstud, kByteSizeStudent)) {
 				// If surname begins with letter A (including Russian)
-				if (bufstud.surname[0] == 'A' || bufstud.surname[0] == 'А') {
+				if (bufstud.surname[0] == 'A' || bufstud.surname[0] == 'ГЂ') {
 					// And marks in maths are 8 or 9
 					if (bufstud.maths == 8 || bufstud.maths == 9) {
 						isFound = true;
